@@ -1,0 +1,49 @@
+/* Grundstil für die anklickbaren Karten */
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f9fafb; /* Leichtes Grau für den Hintergrund */
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    
+    /* Animationseigenschaften */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover-Effekt: Karte wird größer, leuchtet auf und bekommt einen grünen Rand */
+.menu-card:hover {
+    transform: scale(1.05); /* Macht das Element 5% größer */
+    filter: brightness(1.1); /* Lässt das Element aufleuchten */
+    border-color: #064e3b; /* Grüner Rand passend zum Design */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten */
+    background-color: #ffffff;
+}
+
+/* Bild-Einstellungen */
+.menu-icon {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* Text-Einstellungen */
+.menu-label {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #374151;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Wenn kein Bild gefunden wird (Fallback) */
+.menu-icon:after {
+    content: "Bild fehlt";
+    font-size: 10px;
+    color: red;
+}
